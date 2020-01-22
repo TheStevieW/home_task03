@@ -10,8 +10,14 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        .parallax
+        .parallaxx
           include ./pug/hero/hero
           include ./pug/about/about
         include ./pug/skills/skills
         include ./pug/works/works
+        .final-section
+          .parallax
+            +image("content/bg-road.png", "parallax__image")
+          include ./pug/reviews/reviews
+          include ./pug/contacts/contacts
+        include ./pug/footer
