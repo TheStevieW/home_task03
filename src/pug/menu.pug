@@ -1,7 +1,7 @@
-- var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
+- var menu = [['Главная','hero'], ['Обо мне','about'], ['Навыки','skills'], ['Работы','works'], ['Отзывы','reviews'], ['Связаться','contacts']]
 - var i = 0
 ul.menu
   each item in menu
     - i = i + 1
     li.menu__item
-      a(href="#sec"+i) #{item}
+      a(href='#' + item[1]) #{item[0]}
