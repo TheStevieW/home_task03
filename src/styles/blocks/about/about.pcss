@@ -1,10 +1,9 @@
-.about{
-  background: url('../images/content/about-bg.jpg') center center /cover no-repeat;
+.about {
   height: 100vh;
   min-height: 750px;
 
 
-  &__container{
+  &__container {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -12,34 +11,34 @@
     align-items: center;
   }
 
-  &-items{
+  &-items {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
-  &__info{
+  &__info {
     max-width: 40%;
 
-    &-photo{
+    &-photo {
       width: 200px;
       height: 200px;
       border-radius: 50%;
       margin: auto;
     }
 
-    &-table{
+    &-table {
       padding-top: 15%;
       margin: auto;
     }
 
-    &-item{
+    &-item {
       line-height: 30px;
       font-weight: 600;
-      color: #434547;
+      color: rgba(255, 255, 255, 0.15);
     }
 
-    &-desc{
+    &-desc {
       padding-left: 90px;
       line-height: 30px;
       font-weight: 600;
@@ -47,17 +46,19 @@
     }
   }
 
-  &__desc{
+  &__desc {
     max-width: 50%;
+    color: rgba(255, 255, 255, 0.5);
 
-    &-text{
+    &-text {
 
-      &--note{
+      &--note {
         margin-top: 78px;
         font-style: italic;
         font-weight: normal;
         position: relative;
-        &:before{
+
+        &:before {
           display: block;
           position: absolute;
           content: "*";
@@ -70,7 +71,7 @@
       }
     }
 
-    &-title{
+    &-title {
       font-size: 48px;
       font-weight: 700;
       color: $white;
@@ -81,49 +82,57 @@
   }
 }
 
-@include tablets{
+@include tablets {
 
-  .about__info-photo{
+  .about__info-photo {
     margin: unset;
   }
-  .about__info-table{
+
+  .about__info-table {
     margin: unset;
   }
-  .about__info-desc{
+
+  .about__info-desc {
     padding-left: 20px;
   }
 }
 
-@include tabletsSmall{
-  .about__info{
+@include tabletsSmall {
+  .about__info {
     max-width: unset;
   }
-  .about__info-desc{
+
+  .about__info-desc {
     padding-left: 90px;
   }
-  .about__info-photo{
+
+  .about__info-photo {
     margin: auto;
   }
-  .about__info-table{
+
+  .about__info-table {
     margin: auto;
   }
-  .about-items{
+
+  .about-items {
     flex-direction: column;
     align-items: center;
   }
-  .about__container{  
+
+  .about__container {
     padding-top: 80px;
     padding-bottom: 100px;
   }
-  .about__desc{
+
+  .about__desc {
     margin-top: 50px;
     max-width: unset;
   }
 }
 
 @include phones {
-  .about{
-    &__desc-title{
+  .about {
+    &__desc-title {
       width: unset;
     }
   }
