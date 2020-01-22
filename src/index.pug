@@ -10,14 +10,16 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        .parallaxx
-          include ./pug/hero/hero
-          include ./pug/about/about
+        .parallax
+          +image("content/hero-bg-tablet.jpg", "parallax__image")
+        include ./pug/hero/hero
+        include ./pug/about/about
+      .between-sections
         include ./pug/skills/skills
         include ./pug/works/works
-        .final-section
-          .parallax
-            +image("content/bg-road.png", "parallax__image")
-          include ./pug/reviews/reviews
-          include ./pug/contacts/contacts
-        include ./pug/footer
+      .final-section
+        .parallax
+          +image("content/bg-road.png", "parallax__image")
+        include ./pug/reviews/reviews
+        include ./pug/contacts/contacts
+      include ./pug/footer

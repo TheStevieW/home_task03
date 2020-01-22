@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 0;
   }
 
   &-items {
@@ -78,62 +79,6 @@
       margin-top: 16px;
       margin-bottom: 24px;
       width: 520px;
-    }
-  }
-}
-
-@include tablets {
-
-  .about__info-photo {
-    margin: unset;
-  }
-
-  .about__info-table {
-    margin: unset;
-  }
-
-  .about__info-desc {
-    padding-left: 20px;
-  }
-}
-
-@include tabletsSmall {
-  .about__info {
-    max-width: unset;
-  }
-
-  .about__info-desc {
-    padding-left: 90px;
-  }
-
-  .about__info-photo {
-    margin: auto;
-  }
-
-  .about__info-table {
-    margin: auto;
-  }
-
-  .about-items {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about__container {
-    padding-top: 80px;
-    padding-bottom: 100px;
-  }
-
-  .about__desc {
-    margin-top: 50px;
-    max-width: unset;
-  }
-}
-
-@include phones {
-  .about {
-    &__desc-title {
-      width: unset;
     }
   }
 }
