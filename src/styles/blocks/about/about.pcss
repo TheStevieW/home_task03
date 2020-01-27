@@ -85,15 +85,6 @@
     margin-bottom: 5px;
   }
 
-  &__text {
-    margin-bottom: 5.875rem;
-  }
-
-  &__ps {
-    font-weight: normal;
-    font-style: italic;
-  }
-
   &__hello,
   &__ps,
   &__text {
@@ -102,6 +93,8 @@
 }
 
 .about__text {
+  margin-bottom: 5.875rem;
+
   @include tablets {
     margin-bottom: 1.5rem;
   }
@@ -110,6 +103,8 @@
 .about__ps {
   display: flex;
   align-items: flex-start;
+  font-weight: normal;
+  font-style: italic;
 
   &-image {
     margin-left: -40px;
