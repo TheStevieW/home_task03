@@ -1,32 +1,86 @@
-.header{
-  line-height: 36px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.header {
+  align-self: center;
+  width: 100%;
+  color: $white;
+  min-width: 320px;
+  padding: 3.4rem 2rem 0;
+  display: grid;
   align-items: center;
+  justify-items: space-between;
+  grid-template-rows: 1fr;
+  grid-template-columns: 100px 1fr 210px;
+  grid-template-areas:
+    "logo menu socials";
 
-  .menu{
-    padding: 0 10px;
+  @include desktop {
+    grid-template-rows: 1fr;
+    grid-template-columns: 100px 1fr 50px;
+    grid-template-areas:
+      "logo socials hamburger";
   }
 
-  .social{
-    width:14%;
-    min-width: 95px;
+  @include phones {
+    display: flex;
+    justify-content: space-between;
   }
 
-  @include tablets{
-    .menu{
-      display: none;
-    }
+}
 
-    .social{
-      margin-right: 115px;
+.header__menu {
+  grid-area: menu;
+  justify-self: center;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.header__hamburger {
+  display: none;
+
+  @include desktop {
+    grid-area: hamburger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.hamburger__menu {
+  &:hover {
+    .hamburger__icon {
+      opacity: 1;
     }
   }
 
-  @include phones{
-    .social{
-      display: none;
+  &:focus {
+    outline: 1px solid $orange;
+  }
+
+  &:active {
+    .hamburger__icon {
+      opacity: 1;
     }
+  }
+}
+
+.hamburger__icon {
+  width: 30px;
+  height: 30px;
+  fill: $white;
+  opacity: .5;
+}
+
+.header__social {
+  grid-area: socials;
+  justify-self: end;
+
+  @include desktop {
+    margin-right: 90px;
+  }
+
+  @include phones {
+    display: none;
   }
 }

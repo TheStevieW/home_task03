@@ -16,10 +16,29 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    @include tablets {
+      justify-content: space-between;
+    }
+
+    @include phones {
+      flex-direction: column;
+    }
   }
 
   &__info {
     max-width: 40%;
+
+    @include tablets {
+      margin-right: 3rem;
+      min-width: 250px;
+    }
+
+    @include phones {
+      min-width: 250px;
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
 
     &-photo {
       width: 200px;
@@ -46,39 +65,83 @@
       color: $white;
     }
   }
+}
 
-  &__desc {
-    max-width: 50%;
-    color: rgba(255, 255, 255, 0.5);
+.about__desc {
+  width: 57%;
+  color: white;
 
-    &-text {
+  @include tablets {
+    width: 55%;
+  }
 
-      &--note {
-        margin-top: 78px;
-        font-style: italic;
-        font-weight: normal;
-        position: relative;
+  @include phones {
+    width: 100%;
+  }
+}
 
-        &:before {
-          display: block;
-          position: absolute;
-          content: "*";
-          color: red;
-          opacity: .1;
-          font-size: 48px;
-          left: -64px;
-          top: 10px;
-        }
-      }
+.about {
+  &__hello {
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    margin-bottom: 5.875rem;
+  }
+
+  &__ps {
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  &__hello,
+  &__ps,
+  &__text {
+    opacity: .5;
+  }
+}
+
+.about__text {
+  @include tablets {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.about__ps {
+  display: flex;
+  align-items: flex-start;
+
+  &-image {
+    margin-left: -40px;
+    margin-top: 10px;
+    margin-right: 15px;
+
+    @include phones {
+      margin-left: -28px;
+      margin-top: 0;
+      margin-right: 0;
     }
+  }
 
-    &-title {
-      font-size: 48px;
-      font-weight: 700;
-      color: $white;
-      margin-top: 16px;
-      margin-bottom: 24px;
-      width: 520px;
-    }
+  &-text {
+    font-weight: 400;
+  }
+}
+
+.about__icon {
+  width: 20px;
+  height: 20px;
+  fill: rgba(219, 2, 0, 0.3);
+
+  @include phones {
+    margin-right: 10px;
+  }
+}
+
+.about__title {
+  margin-bottom: 1.3125rem;
+
+  @include phones {
+    font-size: 30px;
   }
 }

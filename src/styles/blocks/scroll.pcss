@@ -1,23 +1,27 @@
-.scroll{
+.scroll {
   display: flex;
   flex-direction: row;
   justify-content: center;
   line-height: 30px;
 
-  &__item{
+  @include tablets {
+    display: none;
+  }
+
+  &__item {
     display: flex;
     flex-direction: row;
     justify-content: center;
     cursor: pointer;
 
-    &-title{
-    color: $white;
-    font-weight: 700;
-    opacity: .4;
-    transition: .3s;
-  }
+    &-title {
+      color: $white;
+      font-weight: 700;
+      opacity: .4;
+      transition: .3s;
+    }
 
-    &-icon{
+    &-icon {
       width: 30px;
       height: 30px;
       fill: $white;
@@ -25,16 +29,17 @@
       transition: .3s;
     }
 
-    &:hover{
-      .scroll__item-title{
+    &:hover {
+      .scroll__item-title {
         color: $orange;
         opacity: 1;
       }
-      .scroll__item-icon{
+
+      .scroll__item-icon {
         fill: $orange;
         opacity: 1;
       }
     }
   }
-  
+
 }
