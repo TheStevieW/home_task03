@@ -1,100 +1,181 @@
 .footer {
-  padding-top: 80px;
-  padding-bottom: 85px;
-  background-color: #222427;
-  color: #393a3d;
+	background-color: $footer;
+}
 
-  &__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 80px 0.125rem;
 
-  &__left {
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+	@include tablets {
+		padding: 60px 40px;
+		justify-content: space-between;
+	}
 
-    &-copyright {
-      margin-right: 20px;
-    }
+	@include phones {
+		padding: 3.75rem 5px;
+		flex-direction: column;
+	}
+}
 
-    &-year {
-      font-size: 48px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
+.footer__left {
+	display: flex;
+	justify-content: space-between;
+	width: 35%;
+	margin-right: 4.375rem;
 
-    &-author {
-      margin-top: 10px;
-      color: $white;
-      text-transform: uppercase;
-      font-size: 18px;
-      font-weight: 800;
-      line-height: 30px;
-    }
+	@media screen and (max-width: 975px) {
+		margin-right: 5.125rem;
+		flex-direction: column;
+		width: 25%;
+	}
 
-    &-desc {
-      margin-top: 32px;
-    }
-  }
+	@include phones {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+}
 
-  &__right {
-    width: 71%;
+.footer__menu {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
 
-    &-content {
-      margin-top: 70px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      color: $dark-grey;
+	@include tablets {
+		width: 70%;
+	}
 
-      .left {
-        width: 40%;
+	@include phones {
+		width: 100%;
+	}
 
-        &-desc {
-          line-height: 30px;
-        }
+	&-row {
+		display: flex;
+	}
+}
 
-        .social {
-          margin-top: 30px;
-          width: 190px;
-          height: unset;
+.footer__menu-row {
+	margin-bottom: 3.125rem;
 
-          .social__item {
-            width: 50px;
-            height: 50px;
-            border: 1px solid $dark-grey;
-            border-radius: 50%;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
 
-            &:hover {
-              border-color: $orange;
-            }
+.footer__about {
+	margin-right: 54px;
+	width: 40%;
 
-            &-link {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
-          }
-        }
-      }
+	@include tablets {
+		width: 100%;
+		margin-bottom: 50px;
+		margin-right: 0;
+	}
+}
 
-      .right {
-        width: 54%;
+.footer__quote {
+	width: 50%;
 
-        &-desc {
-          line-height: 30px;
-        }
+	@include tablets {
+		width: 100%;
+	}
+}
 
-        &-designer {
-          margin-top: 30px;
-          color: $white;
-          font-style: italic;
-        }
-      }
-    }
-  }
+.footer__about-text,
+.footer__quote-text {
+	font-size: 16px;
+	font-weight: normal;
+	color: white;
+	opacity: .3;
+	margin-bottom: 20px;
+}
+
+.footer__author-name {
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+	margin-bottom: 1.2rem;
+
+	@include phones {
+		margin-bottom: 0.2rem;
+	}
+}
+
+.footer__author-desc {
+	font-size: 16px;
+	font-weight: normal;
+	color: white;
+	opacity: .15;
+}
+
+.footer__copyright {
+	width: 50%;
+	margin-right: 50px;
+
+	@media screen and (max-width: 975px) {
+		margin-bottom: 30px;
+		width: 100%;
+	}
+
+	&-text {
+		font-size: 48px;
+		font-weight: 600;
+		color: white;
+		opacity: .1;
+		line-height: 1;
+	}
+}
+
+.footer__author {
+	width: 44%;
+
+	@include tablets {
+		width: 100%;
+	}
+}
+
+.footer__quote-author {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: italic;
+	color: white;
+}
+
+.footer__nav {
+	width: 85%;
+
+
+	.nav__list {
+		justify-content: space-between;
+
+		@media screen and (max-width: 975px) {
+			width: 100%;
+			flex-wrap: wrap;
+			line-height: 3;
+			justify-content: flex-start;
+		}
+	}
+
+	@include phones {
+		width: 100%;
+	}
+}
+
+.footer__nav .nav__item {
+	@include tablets {
+		margin-right: 2.75rem;
+	}
+
+	@include phones {
+		margin-right: 3.75rem;
+	}
+}
+
+.footer__menu-row--about {
+	@include tablets {
+		display: flex;
+		flex-direction: column;
+	}
 }

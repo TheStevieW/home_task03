@@ -1,0 +1,32 @@
+section.section.about(id="about")
+	.container.about__container
+		.about__info
+			.personal-info
+				.personal-info__avatar
+					.avatar
+						+image("content/avatar.jpg", "avatar__image")
+				.personal-info__data
+					table.table__list
+						tr
+							- var data = ["Проживаю:", "Рига"]
+							each item in data
+								td.table__item
+									p= item
+						tr
+							- var data = ["Возраст:", "27 лет"]
+							each item in data
+								td.table__item
+									p= item
+						tr
+							- var data = ["Родился:", "21 мая 1992"]
+							each item in data
+								td.table__item
+									p= item
+		.about__desc
+			p.about__hello Привет, меня зовут
+			h2.about__title Антон Григорьев
+			p.about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+			.about__ps 
+				.about__ps-image
+					+icon("asterisk", "about__icon")
+				p.about__ps-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
