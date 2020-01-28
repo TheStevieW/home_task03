@@ -19,11 +19,9 @@ new Vue({
 	},
 	methods: {
 		clickPrev() {
-			console.log("prev")
 			document.querySelector('.VueCarousel-navigation-prev').click();
 		},
 		clickNext() {
-			console.log("next")
 			document.querySelector('.VueCarousel-navigation-next').click()
 		}
 	},
