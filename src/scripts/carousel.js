@@ -18,14 +18,13 @@ new Vue({
 		ReviewsCarousel
 	},
 	methods: {
-		prev() {
+		clickPrev() {
 			console.log("prev")
-			//this.$refs['carousel'][0].prev()
-			console.log(this.$refs['carousel'][0])
+			document.querySelector('.VueCarousel-navigation-prev').click();
 		},
-		next() {
+		clickNext() {
 			console.log("next")
-			//this.$refs['carousel'][0].next()
+			document.querySelector('.VueCarousel-navigation-next').click()
 		}
 	},
 
