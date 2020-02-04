@@ -63,6 +63,10 @@
 	&:focus {
 		outline: 1px solid orange;
 	}
+
+	&:disabled {
+		background-color: gray;
+	}
 }
 
 .control-btn {
@@ -82,11 +86,19 @@
 	}
 
 	&:hover {
-		opacity: .7;
+		border: 1px solid orange;
+
+		.control-btn__icon {
+			fill: orange;
+		}
 	}
 
 	&:focus {
 		outline: 1px solid orange;
+	}
+
+	&:disabled {
+		opacity: .3;
 	}
 }
 
@@ -103,7 +115,7 @@
 
 .reviews-controls {
 	display: flex;
-
+	z-index: 10;
 }
 
 
@@ -148,6 +160,10 @@
 	margin-right: 15px;
 }
 
-/* .VueCarousel-navigation {
+.reviews__control-panel {
+	z-index: 10;
+}
+
+.VueCarousel-navigation {
 	display: none;
-} */
+}
