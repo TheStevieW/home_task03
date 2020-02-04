@@ -7,3 +7,4 @@ import "./scripts/parallax.js";
 import "./scripts/skills.js";
 import "./scripts/carousel.js";
 import "./scripts/projects.js";
+import "./scripts/form.js";
