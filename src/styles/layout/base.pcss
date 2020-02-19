@@ -2,16 +2,14 @@ html {
   @include desktop {
     font-size: 15px;
   }
-
   @include tablets {
     font-size: 14px;
   }
 }
-
 body,
 html {
   height: 100%;
-
+ 
 }
 
 body {
@@ -41,15 +39,15 @@ body {
 }
 
 .fullscreen-section {
-  height: 100vh;
-  min-height: 568px;
+	height: 100vh;
+	min-height: 568px;
 }
 
 
 
 .section {
   min-height: 500px;
-
+  
   @include tablets {
     min-height: 400px;
   }
@@ -135,15 +133,12 @@ a {
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-
   &:hover {
     color: $main;
   }
-
   &:focus {
     outline: 1px solid $main;
   }
-
   &:active {
     color: $href;
     outline: 1px solid transparent;
@@ -156,11 +151,11 @@ input {
   }
 }
 
-input:focus+label {
+input:focus + label {
   opacity: 1;
 }
 
-textarea:focus+label {
+textarea:focus + label {
   opacity: 1;
 }
 

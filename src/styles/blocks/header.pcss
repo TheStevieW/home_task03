@@ -13,26 +13,25 @@
 		"logo menu socials";
 
 	@media screen and (max-width: 975px) {
-		grid-template-rows: 1fr;
+    	grid-template-rows: 1fr;
 		grid-template-columns: 100px 1fr 50px;
 		grid-template-areas:
-			"logo socials hamburger";
-	}
+		"logo socials hamburger";
+  	}
 
 	@include phones {
 		display: flex;
 		justify-content: space-between;
 	}
-
-}
-
+	
+} 
 .header__menu {
 	grid-area: menu;
 	justify-self: center;
 
 	@media screen and (max-width: 975px) {
-		display: none;
-	}
+    	display: none;
+  	}
 }
 
 .logo {
@@ -47,29 +46,29 @@
 	display: none;
 
 	@media screen and (max-width: 975px) {
-		grid-area: hamburger;
+    	grid-area: hamburger;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
-
+  	}
+	
 }
 
 .hamburger__menu {
 	&:hover {
 		.hamburger__icon {
-			opacity: 1;
+		opacity: 1;
 		}
 	}
-
+	
 	&:focus {
 		outline: 1px solid orange;
 	}
 
 	&:active {
 		.hamburger__icon {
-			opacity: 1;
-		}
+		opacity: 1;
+	}
 	}
 }
 
@@ -85,8 +84,8 @@
 	justify-self: end;
 
 	@media screen and (max-width: 975px) {
-		margin-right: 90px;
-	}
+    	margin-right: 90px;
+  	}
 
 	@include phones {
 		display: none;
